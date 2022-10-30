@@ -51,3 +51,8 @@ func motion_ctrl():
 	motion = move_and_slide(motion, FLOOR)
 
 
+
+
+func _on_Area2D_area_entered(area):
+	if area.is_in_group("Player"):
+		get_tree().reload_current_scene()
