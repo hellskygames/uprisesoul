@@ -891,7 +891,7 @@ resource_local_to_scene = true
 29/z_index = 0
 
 [sub_resource type="RectangleShape2D" id=17]
-extents = Vector2( 32, 12.7063 )
+extents = Vector2( 10, 10.8531 )
 
 [sub_resource type="SegmentShape2D" id=23]
 a = Vector2( 18.562, -4.0389 )
@@ -979,7 +979,7 @@ z_index = -4
 [node name="Area2D" type="Area2D" parent="Area2D/Sierra"]
 
 [node name="ColisionSierra" type="CollisionShape2D" parent="Area2D/Sierra/Area2D"]
-position = Vector2( 0, -2 )
+position = Vector2( 0, -0.146851 )
 shape = SubResource( 17 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
