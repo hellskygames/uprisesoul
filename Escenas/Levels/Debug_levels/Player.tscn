@@ -1,4 +1,4 @@
-[gd_scene load_steps=43 format=2]
+[gd_scene load_steps=44 format=2]
 
 [ext_resource path="res://Actores/Personajes/Protagonista/Caminar/caminar7.png" type="Texture" id=1]
 [ext_resource path="res://Actores/Personajes/Protagonista/Caminar/caminar5.png" type="Texture" id=2]
@@ -40,6 +40,9 @@
 [ext_resource path="res://Actores/Personajes/Protagonista/Ataque/ataque5.png" type="Texture" id=38]
 [ext_resource path="res://Actores/Personajes/Protagonista/Ataque/ataque3.png" type="Texture" id=39]
 
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 10, 2.98302 )
+
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 34 ), ExtResource( 36 ), ExtResource( 39 ), ExtResource( 35 ), ExtResource( 37 ), ExtResource( 38 ) ],
@@ -68,31 +71,39 @@ animations = [ {
 "speed": 15.0
 } ]
 
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 10, 13.2654 )
+[sub_resource type="CapsuleShape2D" id=3]
+radius = 9.94164
+height = 3.63636
 
-[sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 10.6442, 13.7934 )
+[sub_resource type="CapsuleShape2D" id=4]
+radius = 10.3149
+height = 12.5164
 
 [node name="Player" type="KinematicBody2D" groups=["Player"]]
 script = ExtResource( 15 )
 
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2( -0.331089, 7.18842 )
+shape = SubResource( 2 )
+
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( -0.210224, -3.25847 )
 scale = Vector2( 0.2, 0.2 )
 frames = SubResource( 1 )
-animation = "ataque"
-frame = 4
+animation = "caminar"
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 0, -0.734564 )
-shape = SubResource( 2 )
-
-[node name="Area2D" type="Area2D" parent="." groups=["obstaculos"]]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 0, -0.613645 )
+position = Vector2( 1, -4 )
+scale = Vector2( 0.9, 1.1 )
 shape = SubResource( 3 )
 
-[connection signal="animation_finished" from="AnimatedSprite" to="." method="_on_AnimatedSprite_animation_finished"]
-[connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]
+[node name="Daño" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Daño"]
+position = Vector2( 1.12521, -3.41128 )
+scale = Vector2( 0.9, 0.8 )
+shape = SubResource( 4 )
+
+[connection signal="area_entered" from="Daño" to="." method="_on_Area2D_area_entered"]
+[connection signal="area_entered" from="Daño" to="." method="_on_Dano_area_entered"]

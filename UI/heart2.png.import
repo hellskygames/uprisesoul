@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Health_0000_Created-by-Adwit-Rahman-@adwitr_itch.io-.png-389a3bb98ad3713b2b529560bcaf5ca3.stex"
+path="res://.import/heart2.png-f0afea58e6cab22624cd2d633d3c0e66.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://UI/Menu_items/HUD/Barra de vida Y energia/Health_0000_Created-by-Adwit-Rahman-@adwitr_itch.io-.png"
-dest_files=[ "res://.import/Health_0000_Created-by-Adwit-Rahman-@adwitr_itch.io-.png-389a3bb98ad3713b2b529560bcaf5ca3.stex" ]
+source_file="res://UI/heart2.png"
+dest_files=[ "res://.import/heart2.png-f0afea58e6cab22624cd2d633d3c0e66.stex" ]
 
 [params]
 

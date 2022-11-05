@@ -1,11 +1,8 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Assets/IMG/Obstáculos/sierra2.png" type="Texture" id=1]
 [ext_resource path="res://Assets/IMG/Obstáculos/sierra1.png" type="Texture" id=2]
-[ext_resource path="res://Actores/Obstaculos/Sierra.gd" type="Script" id=3]
-
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 10, 5.48922 )
+[ext_resource path="res://Actores/Obstaculos/Enemy.gd" type="Script" id=3]
 
 [sub_resource type="SpriteFrames" id=3]
 animations = [ {
@@ -15,15 +12,50 @@ animations = [ {
 "speed": 12.0
 } ]
 
-[node name="Sierra" type="KinematicBody2D"]
-script = ExtResource( 3 )
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 10.1276, 5.48922 )
 
-[node name="ColisionDeSierra" type="CollisionShape2D" parent="."]
-position = Vector2( 0, -5.54115 )
-shape = SubResource( 2 )
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 9.75585, 5.26557 )
+
+[node name="Sierra" type="KinematicBody2D" groups=["enemigos"]]
+script = ExtResource( 3 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 3 )
 animation = "sierra"
 frame = 1
 playing = true
+
+[node name="FloorDetection" type="RayCast2D" parent="AnimatedSprite"]
+position = Vector2( -11.6648, -0.44101 )
+enabled = true
+cast_to = Vector2( -0.0419922, 6.8731 )
+collide_with_areas = true
+
+[node name="ColisionDeSierra" type="CollisionShape2D" parent="."]
+show_behind_parent = true
+position = Vector2( -0.127558, -5.54115 )
+z_index = -1
+shape = SubResource( 2 )
+
+[node name="LeftRay" type="RayCast2D" parent="."]
+position = Vector2( -0.0759258, -4.97414 )
+enabled = true
+cast_to = Vector2( 9.59317, -0.0235415 )
+collision_mask = 4
+
+[node name="RightRay" type="RayCast2D" parent="."]
+position = Vector2( -0.169571, -4.97414 )
+scale = Vector2( 1, 1.05127 )
+enabled = true
+cast_to = Vector2( -9.7454, 0.0385485 )
+collision_mask = 4
+
+[node name="Hitbox" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox"]
+show_behind_parent = true
+position = Vector2( -0.102418, -5.39673 )
+z_index = -1
+shape = SubResource( 4 )

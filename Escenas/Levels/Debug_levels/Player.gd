@@ -5,6 +5,8 @@ const FLOOR = Vector2(0, -1)
 const GRAVITY = 13
 const JUMP_HEIGHT = 240
 onready var motion = Vector2.ZERO
+var health : int = 120
+
 
 
 
@@ -51,8 +53,11 @@ func motion_ctrl():
 	motion = move_and_slide(motion, FLOOR)
 
 
+		
+func damage_player(damage):
+	health -= damage
 
 
-func _on_Area2D_area_entered(area):
-	if area.is_in_group("Player"):
-		get_tree().reload_current_scene()
+func _on_Dano_area_entered(area):
+	if area.get_parent().is_in_group("enemigos"):
+		damage_player(area.get_parent().damage) 
