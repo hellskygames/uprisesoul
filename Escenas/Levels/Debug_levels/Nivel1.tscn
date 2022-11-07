@@ -892,7 +892,7 @@ resource_local_to_scene = true
 29/z_index = 0
 
 [sub_resource type="RectangleShape2D" id=17]
-extents = Vector2( 9, 7 )
+extents = Vector2( 10.5, 11 )
 
 [sub_resource type="SegmentShape2D" id=23]
 a = Vector2( 18.562, -4.0389 )
@@ -968,7 +968,7 @@ tile_data = PoolIntArray( -852003, 1073741826, 0, -852002, 1073741826, 0, -85200
 position = Vector2( 727, -30 )
 
 [node name="Player" parent="." instance=ExtResource( 6 )]
-position = Vector2( 17, -13 )
+position = Vector2( -39, -12 )
 
 [node name="Camera2D" parent="." groups=["Camera"] instance=ExtResource( 7 )]
 position = Vector2( 17, -13 )
@@ -977,17 +977,17 @@ offset_v = -0.6
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="Sierra" parent="Area2D" instance=ExtResource( 13 )]
-position = Vector2( 984, 30 )
+position = Vector2( 987, 34 )
 z_index = -4
 
 [node name="Area2D" type="Area2D" parent="Area2D/Sierra"]
 
 [node name="ColisionSierra" type="CollisionShape2D" parent="Area2D/Sierra/Area2D"]
-position = Vector2( 1, -3 )
+position = Vector2( -0.5, -1 )
 shape = SubResource( 17 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 144, 25.7063 )
+position = Vector2( 144, 25 )
 shape = SubResource( 17 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]

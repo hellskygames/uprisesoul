@@ -23,6 +23,8 @@ position = Vector2( 0, -5.54115 )
 shape = SubResource( 2 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 0.25, -0.25 )
+scale = Vector2( 1.02381, 1.02381 )
 frames = SubResource( 3 )
 animation = "sierra"
 frame = 1
