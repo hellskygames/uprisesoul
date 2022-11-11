@@ -893,6 +893,7 @@ extents = Vector2( 10.38, 10.4612 )
 extents = Vector2( 160, 11 )
 
 [node name="Nivel1" type="Node2D"]
+position = Vector2( 2, 0 )
 script = ExtResource( 5 )
 
 [node name="FondoInicial" type="ParallaxBackground" parent="."]
