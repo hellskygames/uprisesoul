@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://Control.gd" type="Script" id=1]
-[ext_resource path="res://Menu.tres" type="DynamicFont" id=2]
-[ext_resource path="res://Escenas/Levels/Menu/pixil-frame-0 (7).png" type="Texture" id=3]
+[ext_resource path="res://Menu.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Control.gd" type="Script" id=2]
+[ext_resource path="res://Sonidos/cave themeb4.ogg" type="AudioStream" id=3]
 [ext_resource path="res://Escenas/Levels/Menu/infierno.png" type="Texture" id=4]
-[ext_resource path="res://Escenas/Levels/Menu/logo.png" type="Texture" id=5]
+[ext_resource path="res://Escenas/Levels/Menu/pixil-frame-0 (7).png" type="Texture" id=5]
+[ext_resource path="res://Escenas/Levels/Menu/logo.png" type="Texture" id=6]
 
 [sub_resource type="ImageTexture" id=2]
 
@@ -15,7 +16,7 @@
 [node name="Control" type="Control" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
-script = ExtResource( 1 )
+script = ExtResource( 2 )
 
 [node name="FONDO" type="NinePatchRect" parent="Control"]
 anchor_right = 1.0
@@ -33,7 +34,7 @@ texture_normal = SubResource( 2 )
 [node name="Logo" type="Sprite" parent="Control/FONDO/logo"]
 position = Vector2( 652, 322 )
 scale = Vector2( 0.484766, 0.453906 )
-texture = ExtResource( 5 )
+texture = ExtResource( 6 )
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Control"]
 anchor_left = 0.5
@@ -51,7 +52,7 @@ custom_constants/separation = 1
 margin_right = 308.0
 margin_bottom = 80.0
 rect_min_size = Vector2( 200, 80 )
-texture_normal = ExtResource( 3 )
+texture_normal = ExtResource( 5 )
 expand = true
 
 [node name="Label" type="Label" parent="Control/VBoxContainer/JUGAR"]
@@ -65,7 +66,7 @@ margin_right = 32.0
 margin_bottom = -27.68
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 1 )
 text = "JUGAR"
 
 [node name="OPCIONES" type="TextureButton" parent="Control/VBoxContainer"]
@@ -74,7 +75,7 @@ margin_top = 81.0
 margin_right = 300.0
 margin_bottom = 161.0
 rect_min_size = Vector2( 200, 80 )
-texture_normal = ExtResource( 3 )
+texture_normal = ExtResource( 5 )
 expand = true
 
 [node name="Label" type="Label" parent="Control/VBoxContainer/OPCIONES"]
@@ -86,7 +87,7 @@ margin_left = -89.0
 margin_top = -17.0
 margin_right = 8.0
 margin_bottom = 28.0
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 1 )
 text = "OPCIONES
 "
 
@@ -95,7 +96,7 @@ margin_top = 81.0
 margin_right = 308.0
 margin_bottom = 161.0
 rect_min_size = Vector2( 200, 80 )
-texture_normal = ExtResource( 3 )
+texture_normal = ExtResource( 5 )
 expand = true
 
 [node name="Label" type="Label" parent="Control/VBoxContainer/SALIR"]
@@ -107,7 +108,7 @@ margin_left = -27.0
 margin_top = -14.0
 margin_right = 31.0
 margin_bottom = 31.0
-custom_fonts/font = ExtResource( 2 )
+custom_fonts/font = ExtResource( 1 )
 text = "Salir
 "
 
@@ -116,6 +117,11 @@ margin_top = 162.0
 margin_right = 308.0
 margin_bottom = 162.0
 texture_normal = SubResource( 3 )
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+pitch_scale = 1.74
+autoplay = true
 
 [connection signal="pressed" from="Control/VBoxContainer/JUGAR" to="Control" method="_on_JUGAR_pressed"]
 [connection signal="pressed" from="Control/VBoxContainer/SALIR" to="Control" method="_on_SALIR_pressed"]

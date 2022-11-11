@@ -22,6 +22,8 @@ extents = Vector2( 9.75585, 5.26557 )
 script = ExtResource( 3 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 0.25, -0.25 )
+scale = Vector2( 1.02381, 1.02381 )
 frames = SubResource( 3 )
 animation = "sierra"
 frame = 1
