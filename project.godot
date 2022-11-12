@@ -11,12 +11,9 @@ config_version=4
 [application]
 
 config/name="Up Rise Soul"
-<<<<<<< HEAD
 run/main_scene="res://Escenas/Levels/Debug_levels/Menu.tscn"
-=======
-run/main_scene="res://Escenas/Levels/Debug_levels/Nivel1.tscn"
->>>>>>> origin/plataformas
 config/icon="res://Assets/iconoUP.png"
+<<<<<<<HEADrun/main_scene="res://Escenas/Levels/Debug_levels/Menu.tscn"
 
 [display]
 

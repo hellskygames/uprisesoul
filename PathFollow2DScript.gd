@@ -7,6 +7,7 @@ onready var animationPlayer = $AnimationPlayer
 func _ready():
 	animationPlayer.play("horizontal")
 	animationPlayer.play("moving")
+	animationPlayer.play("verticalbajo")
 pass
 
 
