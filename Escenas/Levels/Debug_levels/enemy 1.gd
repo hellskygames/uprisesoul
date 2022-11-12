@@ -5,7 +5,7 @@ var is_moving_left = true
 var gravity = 10
 var velocity = Vector2(0, 0) 
 
-var speed = 32
+var speed = 60
 
 func _ready():
 	$AnimatedSprite.play("caminado")

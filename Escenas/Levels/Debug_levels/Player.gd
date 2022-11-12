@@ -4,7 +4,7 @@ const DISPARO = preload("res://Escenas/Levels/Debug_levels/Disparo.tscn")
 
 export var pixelesPorSegundo : int = 180 
 var tiempoHastaDisparo = 2.0
-var tiempoPorcadaDisapro = 2.0
+var tiempoPorcadaDisapro = 1.0
 
 const SPEED = 128
 const FLOOR = Vector2(0, -1)
