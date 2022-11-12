@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=2]
+[gd_scene load_steps=48 format=2]
 
 [ext_resource path="res://Assets/TileSets/Cuevas/background3.png" type="Texture" id=1]
 [ext_resource path="res://Assets/TileSets/Cuevas/background4a.png" type="Texture" id=2]
@@ -15,6 +15,8 @@
 [ext_resource path="res://Actores/Obstaculos/Sierra.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Sonidos/cave themeb4.ogg" type="AudioStream" id=14]
 [ext_resource path="res://Assets/Portal.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Escenas/Levels/Debug_levels/plataforma2dmovil.tscn" type="PackedScene" id=16]
+[ext_resource path="res://PathFollow2DScript.gd" type="Script" id=17]
 
 [sub_resource type="ConvexPolygonShape2D" id=31]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -849,6 +851,65 @@ extents = Vector2( 10.38, 10.4612 )
 [sub_resource type="RectangleShape2D" id=30]
 extents = Vector2( 160, 11 )
 
+[sub_resource type="Curve2D" id=50]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 424, -16, 0, 0, 0, 0, 424, 43 )
+}
+
+[sub_resource type="Animation" id=53]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+
+[sub_resource type="Animation" id=54]
+resource_name = "moving"
+length = 1.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.9, 1.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 58.98, 0.0 ]
+}
+
+[sub_resource type="Curve2D" id=55]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 514, -12, 0, 0, 0, 0, 676, -12 )
+}
+
+[sub_resource type="Animation" id=57]
+resource_name = "horizontal"
+length = 1.6
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.9, 1.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 160.33, 0.0 ]
+}
+
 [node name="Nivel1" type="Node2D"]
 script = ExtResource( 9 )
 
@@ -992,6 +1053,37 @@ Que te Pinchas"
 position = Vector2( 1271, -15 )
 scale = Vector2( 0.466975, 0.410812 )
 escena = "Nivel2"
+
+[node name="plataformasmoviles" type="Path2D" parent="."]
+position = Vector2( 12, -44 )
+curve = SubResource( 50 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="plataformasmoviles"]
+position = Vector2( 424, -16 )
+rotation = 1.5708
+script = ExtResource( 17 )
+
+[node name="KinematicBody2D" parent="plataformasmoviles/PathFollow2D" instance=ExtResource( 16 )]
+rotation = 4.71239
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="plataformasmoviles/PathFollow2D"]
+playback_speed = 0.7
+anims/RESET = SubResource( 53 )
+anims/moving = SubResource( 54 )
+
+[node name="platoformahorizontal" type="Path2D" parent="."]
+curve = SubResource( 55 )
+
+[node name="PathFollow2D" type="PathFollow2D" parent="platoformahorizontal"]
+position = Vector2( 642.804, -12 )
+offset = 128.822
+script = ExtResource( 17 )
+
+[node name="KinematicBody2D" parent="platoformahorizontal/PathFollow2D" instance=ExtResource( 16 )]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="platoformahorizontal/PathFollow2D"]
+playback_speed = 0.5
+anims/horizontal = SubResource( 57 )
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_obstaculos_area_entered"]
 [connection signal="area_entered" from="Area2D/Sierra/Area2D" to="." method="_on_obstaculos_area_entered"]
