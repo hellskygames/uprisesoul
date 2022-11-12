@@ -11,7 +11,6 @@ config_version=4
 [application]
 
 config/name="Up Rise Soul"
-run/main_scene="res://Escenas/Levels/Debug_levels/Tutorial.tscn"
 config/icon="res://Assets/iconoUP.png"
 
 [display]
