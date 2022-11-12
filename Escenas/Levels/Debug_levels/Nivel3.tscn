@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=2]
+[gd_scene load_steps=42 format=2]
 
 [ext_resource path="res://Assets/TileSets/Cuevas/background1.png" type="Texture" id=1]
 [ext_resource path="res://Escenas/Levels/Debug_levels/Player.tscn" type="PackedScene" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://Assets/IMG/Obstáculos/En Frames/Moving Platfrom_C.png" type="Texture" id=13]
 [ext_resource path="res://Assets/IMG/Obstáculos/Rocky Roads/Lava/lava.tres" type="Texture" id=14]
 [ext_resource path="res://Assets/Portal.tscn" type="PackedScene" id=15]
+[ext_resource path="res://Escenas/Levels/Debug_levels/enemy 1.tscn" type="PackedScene" id=16]
 
 [sub_resource type="ConvexPolygonShape2D" id=31]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -1027,6 +1028,9 @@ autoplay = true
 [node name="Portal" parent="." instance=ExtResource( 15 )]
 position = Vector2( 1234, -31 )
 escena = "Menu"
+
+[node name="KinematicBody2D" parent="." instance=ExtResource( 16 )]
+position = Vector2( 943, -30 )
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_obstaculos_area_entered"]
 [connection signal="area_entered" from="Area2D/Sierra/Area2D" to="." method="_on_obstaculos_area_entered"]

@@ -59,7 +59,7 @@ position = Vector2( -4, 10 )
 scale = Vector2( 0.875, 0.6875 )
 frames = SubResource( 1 )
 animation = "ataque"
-frame = 11
+frame = 9
 speed_scale = 1.5
 playing = true
 
@@ -84,3 +84,5 @@ shape = SubResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="detector de jugador/CollisionShape2D/Area2D"]
 shape = SubResource( 4 )
+
+[connection signal="body_entered" from="detector de jugador/CollisionShape2D/Area2D" to="." method="_on_Area2D_body_entered"]

@@ -1,5 +1,11 @@
 extends KinematicBody2D
 
+const DISPARO = preload("res://Escenas/Levels/Debug_levels/Disparo.tscn")
+
+export var pixelesPorSegundo : int = 180 
+var tiempoHastaDisparo = 2.0
+var tiempoPorcadaDisapro = 2.0
+
 const SPEED = 128
 const FLOOR = Vector2(0, -1)
 const GRAVITY = 13
@@ -8,8 +14,19 @@ onready var motion = Vector2.ZERO
 
 
 
-func _process(_delta):
+func _process(delta):
+	tiempoHastaDisparo += delta 
 	motion_ctrl()
+	
+	if Input.is_key_pressed(KEY_X):
+		disparar()
+
+func disparar():
+	if tiempoHastaDisparo >= tiempoPorcadaDisapro: 
+		tiempoHastaDisparo = 0 
+		var disparo = DISPARO.instance()
+		disparo.position = position
+		get_parent().add_child(disparo)
 	
 	
 	
