@@ -5,7 +5,7 @@ var is_moving_left = true
 var gravity = 10
 var velocity = Vector2(0, 0) 
 
-var speed = 32
+var speed = 60
 
 func _ready():
 	$AnimatedSprite.play("caminado")
@@ -24,3 +24,11 @@ func detect_turn_around():
 	if not $RayCast2D.is_colliding() and is_on_floor():
 		is_moving_left = !is_moving_left
 		scale.x = -scale.x
+
+
+var hits : int = 0
+func _on_Area2D_body_entered(area):
+	if area.is_in_group("Player"):
+		hits = hits + 1
+		if hits > 2:
+			get_tree().reload_current_scene()

@@ -30,7 +30,7 @@ animations = [ {
 "frames": [ ExtResource( 10 ), ExtResource( 15 ), ExtResource( 7 ), ExtResource( 6 ), ExtResource( 21 ), ExtResource( 1 ), ExtResource( 8 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 11 ), ExtResource( 18 ), ExtResource( 9 ), ExtResource( 5 ) ],
 "loop": true,
 "name": "ataque",
-"speed": 12.0
+"speed": 20.0
 }, {
 "frames": [ ExtResource( 19 ), ExtResource( 12 ), ExtResource( 22 ), ExtResource( 14 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 20 ), ExtResource( 4 ), ExtResource( 13 ), ExtResource( 23 ) ],
 "loop": true,
@@ -52,16 +52,16 @@ extents = Vector2( 4, 5 )
 [sub_resource type="RectangleShape2D" id=4]
 
 [node name="KinematicBody2D" type="KinematicBody2D"]
+scale = Vector2( 0.362452, 0.287802 )
 script = ExtResource( 24 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( -4, 10 )
-scale = Vector2( 0.875, 0.6875 )
+scale = Vector2( 0.887141, 0.705196 )
 frames = SubResource( 1 )
-animation = "ataque"
-frame = 11
+animation = "caminado"
+frame = 8
 speed_scale = 1.5
-playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -4.5, 9.5 )
@@ -84,3 +84,5 @@ shape = SubResource( 3 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="detector de jugador/CollisionShape2D/Area2D"]
 shape = SubResource( 4 )
+
+[connection signal="body_entered" from="detector de jugador/CollisionShape2D/Area2D" to="." method="_on_Area2D_body_entered"]
