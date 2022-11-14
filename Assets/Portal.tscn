@@ -7,15 +7,16 @@
 extents = Vector2( 244, 50.5 )
 
 [node name="Puerta" type="Area2D"]
+scale = Vector2( 0.7, 0.7 )
 script = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 203, -0.5 )
+scale = Vector2( 0.7, 0.7 )
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 1, 1.5 )
-scale = Vector2( 0.8, 0.835 )
+scale = Vector2( 0.7, 0.7 )
 z_index = -3
 texture = ExtResource( 2 )
 

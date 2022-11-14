@@ -1366,7 +1366,7 @@ pitch_scale = 3.92
 autoplay = true
 
 [node name="Portal" parent="." instance=ExtResource( 15 )]
-position = Vector2( 1336, -18 )
+position = Vector2( 1181, -43 )
 escena = "Menu"
 
 [node name="KinematicBody2D" parent="." instance=ExtResource( 16 )]
