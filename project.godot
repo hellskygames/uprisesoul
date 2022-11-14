@@ -13,6 +13,7 @@ config_version=4
 config/name="Up Rise Soul"
 run/main_scene="res://Escenas/Levels/Debug_levels/Menu.tscn"
 config/icon="res://Assets/iconoUP.png"
+<<<<<<<HEADrun/main_scene="res://Escenas/Levels/Debug_levels/Menu.tscn"
 
 [display]
 
