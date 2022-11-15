@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=2]
+[gd_scene load_steps=58 format=2]
 
 [ext_resource path="res://Assets/TileSets/Cuevas/background1.png" type="Texture" id=1]
 [ext_resource path="res://Escenas/Levels/Debug_levels/CamaraPlayer.tscn" type="PackedScene" id=2]
@@ -14,7 +14,6 @@
 [ext_resource path="res://Assets/IMG/Obstáculos/En Frames/Trap_Spike.png" type="Texture" id=12]
 [ext_resource path="res://Assets/IMG/Obstáculos/En Frames/Moving Platfrom_C.png" type="Texture" id=13]
 [ext_resource path="res://Assets/IMG/Obstáculos/Rocky Roads/Lava/lava.tres" type="Texture" id=14]
-[ext_resource path="res://Escenas/Levels/Debug_levels/PortalAu.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Assets/TileSets/Faciles/TileMap.png" type="Texture" id=16]
 [ext_resource path="res://Assets/IMG/Obst+ículos/Rocky Roads/background3.png" type="Texture" id=17]
 [ext_resource path="res://Assets/IMG/Obst+ículos/Rocky Roads/background1.png" type="Texture" id=18]
@@ -1660,7 +1659,7 @@ volume_db = -34.958
 pitch_scale = 3.92
 autoplay = true
 
-[node name="PortalAu" parent="." instance=ExtResource( 15 )]
+[node name="PortalAu" parent="." instance=ExtResource( 20 )]
 position = Vector2( 988, 197 )
 
 [node name="Player" parent="." instance=ExtResource( 3 )]
