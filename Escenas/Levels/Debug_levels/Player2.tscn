@@ -198,7 +198,7 @@ extents = Vector2( 4.02054, 6.60993 )
 extents = Vector2( 4.25725, 6.91306 )
 
 [node name="Player" type="KinematicBody2D" groups=["Player"]]
-scale = Vector2( 2.2, 1.7 )
+scale = Vector2( 2.2, 1.9 )
 script = ExtResource( 39 )
 
 [node name="Sprite" type="Sprite" parent="."]
@@ -246,14 +246,12 @@ parameters/playback = SubResource( 21 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -0.0738316, -0.286397 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 22 )
 
 [node name="Area2D" type="Area2D" parent="." groups=["obstaculos"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2( 0.0052104, -0.258648 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 23 )
 
 [node name="RayEnemy" type="RayCast2D" parent="."]
