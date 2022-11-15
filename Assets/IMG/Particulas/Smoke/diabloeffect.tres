@@ -1,0 +1,14 @@
+[gd_resource type="AnimatedTexture" load_steps=3 format=2]
+
+[ext_resource path="res://Assets/IMG/Particulas/En frames/Explosion_2_64x64.png" type="Texture" id=1]
+
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 2431.31, -11.304, 65.178, 85.3523 )
+
+[resource]
+frames = 3
+frame_0/texture = SubResource( 1 )
+frame_1/delay_sec = 0.0
+frame_2/delay_sec = 0.0
