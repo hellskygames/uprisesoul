@@ -29,6 +29,10 @@ func detect_turn_around():
 var hits : int = 0
 func _on_Area2D_body_entered(area):
 	if area.is_in_group("Player"):
+		$AnimatedSprite.play("ataque")
 		hits = hits + 1
 		if hits > 2:
 			get_tree().reload_current_scene()
+	else:
+		$AnimatedSprite.play("caminado")
+		
