@@ -1047,7 +1047,7 @@ text = "     Cuidado
 Que te Pinchas"
 
 [node name="Portal" parent="." instance=ExtResource( 15 )]
-position = Vector2( 1283, -13 )
+position = Vector2( 1289, -15 )
 scale = Vector2( 0.466975, 0.410812 )
 escena = "Nivel2"
 
