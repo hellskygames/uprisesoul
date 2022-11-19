@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Sprite-0012.png-a71f8aea3534208f55c0bff1ba101c21.stex"
+path="res://.import/keyboard_23.png-6f110d9991fabef1d515a08d0f1952ba.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Actores/Personajes/enemigos/demonio/ataque/Sprite-0012.png"
-dest_files=[ "res://.import/Sprite-0012.png-a71f8aea3534208f55c0bff1ba101c21.stex" ]
+source_file="res://UI/keyboard_23.png"
+dest_files=[ "res://.import/keyboard_23.png-6f110d9991fabef1d515a08d0f1952ba.stex" ]
 
 [params]
 
