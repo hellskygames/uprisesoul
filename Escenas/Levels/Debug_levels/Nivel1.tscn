@@ -996,7 +996,7 @@ position = Vector2( 256.734, -14.63 )
 shape = SubResource( 24 )
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 319.274, -64.1712 )
+position = Vector2( 319, -63 )
 rotation = 0.785398
 shape = SubResource( 25 )
 
@@ -1056,7 +1056,7 @@ position = Vector2( 12, -44 )
 curve = SubResource( 50 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="plataformasmoviles"]
-position = Vector2( 424, 13.5377 )
+position = Vector2( 424, -16 )
 rotation = 1.5708
 script = ExtResource( 17 )
 

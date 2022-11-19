@@ -1398,7 +1398,7 @@ a = Vector2( 5, 0 )
 b = Vector2( -10, -15 )
 
 [sub_resource type="SegmentShape2D" id=24]
-a = Vector2( -14, -19 )
+a = Vector2( -4, -32 )
 b = Vector2( 11, -19 )
 
 [sub_resource type="RectangleShape2D" id=25]
@@ -1639,7 +1639,7 @@ position = Vector2( -20, -78 )
 shape = SubResource( 23 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 96, -47 )
+position = Vector2( 86, -48 )
 shape = SubResource( 24 )
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Area2D"]
@@ -1666,7 +1666,7 @@ autoplay = true
 position = Vector2( 6.10352e-05, -12 )
 
 [node name="plataformasmoviles" type="Path2D" parent="."]
-position = Vector2( 23, -82 )
+position = Vector2( 29, -97 )
 curve = SubResource( 55 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="plataformasmoviles"]
@@ -1683,7 +1683,7 @@ anims/RESET = SubResource( 56 )
 anims/moving = SubResource( 57 )
 
 [node name="plataformasmoviles2" type="Path2D" parent="."]
-position = Vector2( 153, -83 )
+position = Vector2( 154, -99 )
 curve = SubResource( 55 )
 
 [node name="PathFollow2D" type="PathFollow2D" parent="plataformasmoviles2"]

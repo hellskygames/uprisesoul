@@ -9,7 +9,8 @@ func _ready():
 	animationPlayer.play("moving")
 	animationPlayer.play("verticalbajo")
 	animationPlayer.play("movimiento")
-	
+	animationPlayer.play("joda")
+	animationPlayer.play("prueba")
 pass
 
 
