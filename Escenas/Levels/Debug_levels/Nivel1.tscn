@@ -836,7 +836,7 @@ resource_local_to_scene = true
 26/z_index = 0
 
 [sub_resource type="RectangleShape2D" id=17]
-extents = Vector2( 10, 11.9265 )
+extents = Vector2( 11, 11.9265 )
 
 [sub_resource type="SegmentShape2D" id=23]
 a = Vector2( 18.562, -4.0389 )

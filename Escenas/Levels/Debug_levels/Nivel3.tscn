@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=2]
+[gd_scene load_steps=61 format=2]
 
 [ext_resource path="res://Assets/TileSets/Cuevas/background1.png" type="Texture" id=1]
 [ext_resource path="res://Escenas/Levels/Debug_levels/Player2.tscn" type="PackedScene" id=2]
@@ -19,6 +19,8 @@
 [ext_resource path="res://Assets/TileSets/Faciles/TileMap.png" type="Texture" id=17]
 [ext_resource path="res://Assets/Portal.tscn" type="PackedScene" id=18]
 [ext_resource path="res://PathFollow2DScript.gd" type="Script" id=19]
+[ext_resource path="res://PortalAu.gd" type="Script" id=20]
+[ext_resource path="res://Escenas/Levels/Debug_levels/Slime.tscn" type="PackedScene" id=21]
 
 [sub_resource type="ShaderMaterial" id=59]
 
@@ -1304,7 +1306,7 @@ motion_mirroring = Vector2( 430, 0 )
 modulate = Color( 0.505882, 0.470588, 0.470588, 1 )
 self_modulate = Color( 0.756863, 0.752941, 1, 1 )
 material = SubResource( 61 )
-position = Vector2( 80, -178.4 )
+position = Vector2( 75.6, -160.8 )
 scale = Vector2( 0.3375, 0.348611 )
 texture = ExtResource( 7 )
 
@@ -1323,7 +1325,7 @@ motion_scale = Vector2( 4, 1 )
 motion_mirroring = Vector2( 370, 0 )
 
 [node name="Fondo3" type="Sprite" parent="FondoInicial/Layer3"]
-position = Vector2( 55.6, -130.8 )
+position = Vector2( 52, -152.8 )
 scale = Vector2( 0.4, 0.3 )
 texture = ExtResource( 8 )
 
@@ -1333,7 +1335,7 @@ motion_mirroring = Vector2( 320, 0 )
 
 [node name="Fondo4" type="Sprite" parent="FondoInicial/Layer4"]
 modulate = Color( 0.619608, 0.552941, 0.745098, 1 )
-position = Vector2( -137.2, -176 )
+position = Vector2( -139.6, -208.4 )
 scale = Vector2( 0.37, 0.19 )
 texture = ExtResource( 6 )
 centered = false
@@ -1423,7 +1425,7 @@ scale = Vector2( 2.2, 1.98827 )
 [node name="Portal" parent="." instance=ExtResource( 18 )]
 position = Vector2( 1205, -43 )
 scale = Vector2( 0.466975, 0.410812 )
-escena = "Menu"
+script = ExtResource( 20 )
 
 [node name="platoformahorizontal" type="Path2D" parent="."]
 position = Vector2( -45, -23 )
@@ -1436,9 +1438,14 @@ script = ExtResource( 19 )
 [node name="KinematicBody2D" parent="platoformahorizontal/PathFollow2D" instance=ExtResource( 15 )]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="platoformahorizontal/PathFollow2D"]
-playback_speed = 0.4
+playback_speed = 0.2
 anims/RESET = SubResource( 63 )
 anims/horizontal = SubResource( 64 )
+
+[node name="Enemy4" parent="." instance=ExtResource( 21 )]
+modulate = Color( 0.431373, 0.521569, 1, 1 )
+position = Vector2( 375, -45 )
+scale = Vector2( 0.5, 0.5 )
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_obstaculos_area_entered"]
 [connection signal="area_entered" from="Area2D/Sierra/Area2D" to="." method="_on_obstaculos_area_entered"]

@@ -1710,8 +1710,9 @@ position = Vector2( 224, -22 )
 scale = Vector2( 0.786307, 0.701694 )
 
 [node name="Portal" parent="." instance=ExtResource( 20 )]
-position = Vector2( 955, 53 )
+position = Vector2( 904, 131 )
 scale = Vector2( 0.466975, 0.410812 )
+z_index = -20
 escena = "Nivel3"
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_obstaculos_area_entered"]
