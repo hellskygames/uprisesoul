@@ -1508,7 +1508,6 @@ position = Vector2( -435.546, -652.993 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/PathFollow2D/Camera2D/Lava colision"]
 position = Vector2( -613.454, 631.016 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 67 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Path2D/PathFollow2D/Camera2D/Lava colision"]
@@ -1517,7 +1516,6 @@ shape = SubResource( 67 )
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="Path2D/PathFollow2D/Camera2D/Lava colision"]
 position = Vector2( 1636.63, 604.211 )
-scale = Vector2( 1, 1 )
 shape = SubResource( 67 )
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Path2D/PathFollow2D/Camera2D/Lava colision"]
@@ -1531,7 +1529,6 @@ rotation = 1.5708
 shape = SubResource( 67 )
 
 [node name="TileMap" type="TileMap" parent="Path2D/PathFollow2D/Camera2D"]
-visible = false
 position = Vector2( -27, -29 )
 scale = Vector2( 8, 8 )
 z_index = 50
