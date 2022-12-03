@@ -4,15 +4,14 @@
 [ext_resource path="res://Assets/Puerta200x200.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 20.4643, 77 )
+extents = Vector2( 136.893, 77 )
 
 [node name="Puerta" type="Area2D"]
 scale = Vector2( 0.7, 0.7 )
 script = ExtResource( 1 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 20.9643, -27 )
-scale = Vector2( 1, 1 )
+position = Vector2( 137.393, -27 )
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]

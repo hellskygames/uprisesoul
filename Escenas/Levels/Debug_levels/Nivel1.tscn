@@ -845,7 +845,7 @@ resource_local_to_scene = true
 26/z_index = 0
 
 [sub_resource type="RectangleShape2D" id=17]
-extents = Vector2( 10, 11.9265 )
+extents = Vector2( 11, 11.9265 )
 
 [sub_resource type="SegmentShape2D" id=23]
 a = Vector2( 18.562, -4.0389 )
@@ -1005,7 +1005,7 @@ position = Vector2( 256.734, -14.63 )
 shape = SubResource( 24 )
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 319.274, -64.1712 )
+position = Vector2( 319, -63 )
 rotation = 0.785398
 shape = SubResource( 25 )
 
@@ -1054,7 +1054,7 @@ custom_fonts/font = ExtResource( 23 )
 text = "	Ataca con"
 
 [node name="Portal" parent="." instance=ExtResource( 15 )]
-position = Vector2( 1283, -13 )
+position = Vector2( 1289, -15 )
 scale = Vector2( 0.466975, 0.410812 )
 escena = "Nivel2"
 
@@ -1089,7 +1089,11 @@ playback_speed = 0.4
 anims/horizontal = SubResource( 57 )
 
 [node name="Player" parent="." instance=ExtResource( 6 )]
+<<<<<<< HEAD
 position = Vector2( -187, -13 )
+=======
+position = Vector2( 1, -15 )
+>>>>>>> origin/lol
 scale = Vector2( 2.1875, 1.92593 )
 
 [node name="MoverA" parent="." instance=ExtResource( 19 )]
