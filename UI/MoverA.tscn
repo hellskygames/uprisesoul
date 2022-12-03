@@ -48,12 +48,12 @@ animations = [ {
 
 [node name="MoverA" type="AnimatedSprite"]
 frames = SubResource( 1 )
-frame = 1
 playing = true
 
 [node name="MoverD" type="AnimatedSprite" parent="."]
 position = Vector2( 37, 1 )
 frames = SubResource( 2 )
+frame = 1
 playing = true
 
 [node name="MoverLS" type="AnimatedSprite" parent="."]
@@ -61,5 +61,4 @@ position = Vector2( 78, -2.00001 )
 scale = Vector2( 2.5, 2.5625 )
 frames = SubResource( 7 )
 animation = "moverLS"
-frame = 1
 playing = true

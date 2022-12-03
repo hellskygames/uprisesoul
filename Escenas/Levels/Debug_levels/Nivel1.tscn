@@ -993,7 +993,15 @@ position = Vector2( 0, -0.0734501 )
 shape = SubResource( 17 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 144, 25.7063 )
+position = Vector2( 144, 30 )
+shape = SubResource( 17 )
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 122, 30 )
+shape = SubResource( 17 )
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 166, 30 )
 shape = SubResource( 17 )
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D"]
@@ -1014,7 +1022,7 @@ position = Vector2( 543, 31 )
 shape = SubResource( 30 )
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 142, 31 )
+position = Vector2( 144, 33 )
 shape = SubResource( 30 )
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
@@ -1022,36 +1030,6 @@ stream = ExtResource( 14 )
 volume_db = -34.958
 pitch_scale = 3.92
 autoplay = true
-
-[node name="Label" parent="." instance=ExtResource( 18 )]
-margin_left = -189.0
-margin_top = -75.0
-margin_right = -44.0
-margin_bottom = -10.0
-
-[node name="Label2" type="Label" parent="."]
-modulate = Color( 0.435294, 0.396078, 0.396078, 1 )
-self_modulate = Color( 0.937255, 0.937255, 0.937255, 1 )
-margin_left = 91.0
-margin_top = -73.0
-margin_right = 198.0
-margin_bottom = -28.0
-custom_colors/font_outline_modulate = Color( 0.694118, 0.505882, 0.505882, 1 )
-custom_colors/font_color_shadow = Color( 0.00784314, 0.00392157, 0.00392157, 1 )
-custom_fonts/font = ExtResource( 23 )
-text = "Salta con
-"
-
-[node name="Label4" type="Label" parent="."]
-modulate = Color( 0.388235, 0.388235, 0.388235, 1 )
-self_modulate = Color( 0.611765, 0.611765, 0.611765, 1 )
-margin_left = 680.0
-margin_top = -81.0
-margin_right = 777.0
-margin_bottom = -50.0
-custom_colors/font_color_shadow = Color( 0.109804, 0.105882, 0.105882, 1 )
-custom_fonts/font = ExtResource( 23 )
-text = "	Ataca con"
 
 [node name="Portal" parent="." instance=ExtResource( 15 )]
 position = Vector2( 1289, -15 )
@@ -1089,32 +1067,51 @@ playback_speed = 0.4
 anims/horizontal = SubResource( 57 )
 
 [node name="Player" parent="." instance=ExtResource( 6 )]
-<<<<<<< HEAD
 position = Vector2( -187, -13 )
-=======
-position = Vector2( 1, -15 )
->>>>>>> origin/lol
 scale = Vector2( 2.1875, 1.92593 )
 
 [node name="MoverA" parent="." instance=ExtResource( 19 )]
 position = Vector2( -144, -44 )
 scale = Vector2( 0.4913, 0.504665 )
+z_index = -2
 
 [node name="AnimatedSprite" parent="MoverA" instance=ExtResource( 20 )]
 position = Vector2( 56.9916, 79.2605 )
 scale = Vector2( 1.71738, 1.36691 )
 z_index = -2
-frame = 7
+frame = 13
+
+[node name="Label" parent="MoverA" instance=ExtResource( 18 )]
+light_mask = 524288
+margin_left = -26.4604
+margin_top = -47.5563
+margin_right = 130.54
+margin_bottom = 21.4437
 
 [node name="SaltaEsp" parent="." instance=ExtResource( 22 )]
-position = Vector2( 119, -43 )
-scale = Vector2( 0.5, 0.5 )
-frame = 0
+position = Vector2( 122, -69 )
+scale = Vector2( 0.489583, 0.53125 )
+z_index = -2
 
 [node name="SaltaA" parent="SaltaEsp" instance=ExtResource( 21 )]
-position = Vector2( 114, -2 )
+position = Vector2( 83.7447, -1.88235 )
 scale = Vector2( 2, 2 )
-frame = 0
+z_index = -2
+
+[node name="Label2" type="Label" parent="SaltaEsp"]
+modulate = Color( 0.435294, 0.396078, 0.396078, 1 )
+self_modulate = Color( 0.937255, 0.937255, 0.937255, 1 )
+light_mask = 4
+margin_left = -34.7234
+margin_top = -48.9412
+margin_right = 72.2766
+margin_bottom = -3.94118
+rect_scale = Vector2( 1.2, 1.2 )
+custom_colors/font_outline_modulate = Color( 0.694118, 0.505882, 0.505882, 1 )
+custom_colors/font_color_shadow = Color( 0.00784314, 0.00392157, 0.00392157, 1 )
+custom_fonts/font = ExtResource( 23 )
+text = "Salta con
+"
 
 [node name="Enemy1" parent="." instance=ExtResource( 24 )]
 position = Vector2( 912, -20 )
@@ -1122,11 +1119,26 @@ scale = Vector2( 0.7, 0.7 )
 
 [node name="gato2" parent="." instance=ExtResource( 25 )]
 position = Vector2( 194, -7 )
-frame = 84
+z_index = -2
+frame = 87
 
 [node name="Ataca" parent="." instance=ExtResource( 26 )]
 position = Vector2( 720, -52 )
 scale = Vector2( 1.5, 1.5 )
+z_index = -2
+
+[node name="Label4" type="Label" parent="Ataca"]
+modulate = Color( 0.388235, 0.388235, 0.388235, 1 )
+self_modulate = Color( 0.611765, 0.611765, 0.611765, 1 )
+light_mask = 8
+margin_left = -17.3333
+margin_top = -19.3333
+margin_right = 89.6667
+margin_bottom = 1.66667
+rect_scale = Vector2( 0.5, 0.5 )
+custom_colors/font_color_shadow = Color( 0.109804, 0.105882, 0.105882, 1 )
+custom_fonts/font = ExtResource( 23 )
+text = "	Ataca con"
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_obstaculos_area_entered"]
 [connection signal="area_entered" from="Area2D/Sierra/Area2D" to="." method="_on_obstaculos_area_entered"]
